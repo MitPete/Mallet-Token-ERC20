@@ -4,7 +4,7 @@ const hre = require("hardhat");
 describe("MalletToken contract", function() {
   // global vars
   let Token;
-  let oceanToken;
+  let MalletToken;
   let owner;
   let addr1;
   let addr2;
@@ -25,7 +25,7 @@ describe("MalletToken contract", function() {
     });
 
     it("Should assign the total supply of tokens to the owner", async function () {
-      const ownerBalance = await oceanToken.balanceOf(owner.address);
+      const ownerBalance = await malletToken.balanceOf(owner.address);
       expect(await MalletToken.totalSupply()).to.equal(ownerBalance);
     });
 
